@@ -12,9 +12,11 @@ import {
   removeErrorDate,
   removeErrorFormat,
   removeWrongDates,
+  removeWrongPlaces,
   showErrorDate,
   showErrorFormat,
   showWrongDates,
+  showWrongPlaces,
 } from '../actions/uiActions';
 
 // Initial travel dates
@@ -23,8 +25,11 @@ const nowPlus3 = now.clone().add(3, 'd');
 
 const FlightsForm = () => {
   const dispatch = useDispatch();
-  const { wrongDatesError } = useSelector(state => state.ui);
 
+  // Get realted inputs errors
+  const { wrongDatesError, wrongPlacesError } = useSelector(state => state.ui);
+
+  // Track inputs state
   const [origin, setOrigin] = useState('');
   const [destination, setDestination] = useState('');
   const [outboundDate, setOutboundDate] = useState(now.toDate());
@@ -33,24 +38,27 @@ const FlightsForm = () => {
   const [children, setChildren] = useState(0);
   const [infants, setInfants] = useState(0);
   const [classFlight, setClassFlight] = useState('Economy');
-
   const [flightType, setFlightType] = useState('Round Trip');
 
   const clearErrors = () => {
     dispatch(removeErrorFormat());
     dispatch(removeErrorDate());
     dispatch(removeWrongDates());
+    dispatch(removeWrongPlaces());
   };
 
   const submitHandler = e => {
     e.preventDefault();
 
-    const from = origin.split(' ');
-    const to = destination.split(' ');
-
+    // Before new checking
     clearErrors();
 
-    if (from.length <= 1) {
+    if (origin === destination) {
+      dispatch(
+        showWrongPlaces('The departure and arrival airports cannot be the same')
+      );
+      console.log('yey');
+    } else if (from.length <= 1) {
       dispatch(showErrorFormat('Select an available origin'));
     } else if (to.length <= 1) {
       dispatch(showErrorFormat('Select an available destination'));
@@ -61,8 +69,8 @@ const FlightsForm = () => {
     } else if (returnDate < outboundDate) {
       dispatch(showWrongDates('Wrong dates'));
     } else {
-      // clearErrors();
-      console.log('llego');
+      const from = origin.split(' ');
+      const to = destination.split(' ');
 
       const originCode = from[from.length - 1];
       const destinationCode = to[to.length - 1];
@@ -74,8 +82,7 @@ const FlightsForm = () => {
         'YYYY-MM-DD'
       )}/adults-${adults}/children-${children}/infants-${infants}/class-${classFlight.toLowerCase()}/al-LX/sidmbvl`;
 
-      console.log(uri);
-
+      // Search with SWISS on new tab
       window.open(uri);
     }
   };
@@ -137,6 +144,12 @@ const FlightsForm = () => {
           </div>
 
           <div className="home__places">
+            {wrongPlacesError && (
+              <div className="error-label">
+                <i className="fas fa-exclamation-circle"></i> {wrongPlacesError}
+              </div>
+            )}
+
             <PlaceSelector
               label="From"
               value={origin}

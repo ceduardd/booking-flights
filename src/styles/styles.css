@@ -313,6 +313,15 @@ body {
   top: -20px;
 }
 
+.home__places {
+  position: relative;
+}
+
+.home__places > .error-label {
+  left: auto;
+  right: 0;
+}
+
 @media screen and (max-width: 500px) {
   .home__form-dates {
     flex-direction: column;
@@ -322,27 +331,3 @@ body {
     font-size: 12px;
   }
 }
-
-/* @media screen and (min-width: 500px) {
-  .home__form-entries {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-      'type type type'
-      'places dates details';
-    gap: 10px;
-  }
-
-  .home__form-flight-type {
-    grid-area: type;
-  }
-
-  .home__places {
-    grid-area: places;
-  }
-
-  .home__form-dates {
-    grid-area: dates;
-  }
-} */

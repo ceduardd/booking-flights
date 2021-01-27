@@ -2,9 +2,11 @@ import {
   REMOVE_ERROR_DATE,
   REMOVE_ERROR_FORMAT,
   REMOVE_WRONG_DATES,
+  REMOVE_WRONG_PLACES,
   SHOW_ERROR_DATE,
   SHOW_ERROR_FORMAT,
   SHOW_WRONG_DATES,
+  SHOW_WRONG_PLACES,
 } from '../constants/uiConstants';
 
 export const uiReducer = (state = {}, action) => {
@@ -41,6 +43,18 @@ export const uiReducer = (state = {}, action) => {
       return {
         ...state,
         wrongDatesError: null,
+      };
+
+    case SHOW_WRONG_PLACES:
+      return {
+        ...state,
+        wrongPlacesError: action.payload,
+      };
+
+    case REMOVE_WRONG_PLACES:
+      return {
+        ...state,
+        wrongPlacesError: null,
       };
 
     default:

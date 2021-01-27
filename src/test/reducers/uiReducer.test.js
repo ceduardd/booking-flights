@@ -6,7 +6,7 @@ import {
 import { uiReducer } from '../../reducers/uiReducer';
 
 describe('uiReducer', () => {
-  test('should be return an error of places', () => {
+  test('should return an error of places', () => {
     const initialState = {
       errorFormat: null,
     };
@@ -23,7 +23,7 @@ describe('uiReducer', () => {
     });
   });
 
-  test('should be return an error of date', () => {
+  test('should return an error of date', () => {
     const initialState = {
       errorDate: null,
     };
@@ -40,7 +40,7 @@ describe('uiReducer', () => {
     });
   });
 
-  test('should be all errors', () => {
+  test('should have all errors', () => {
     const initialState = {
       errorFormat: null,
       errorDate: null,
