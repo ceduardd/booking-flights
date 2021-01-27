@@ -110,7 +110,6 @@ body {
   width: 100%;
   font-family: inherit;
   font-size: 1em;
-
   outline: 0;
   color: inherit;
   font-weight: 700;
@@ -272,10 +271,6 @@ body {
   display: flex;
   justify-content: space-between;
 }
-/* 
-.home__form-dates {
-  margin-top: 30px;
-} */
 
 .date-selector {
   display: block;
@@ -304,7 +299,6 @@ body {
   color: var(--error-color);
   font-style: italic;
   position: absolute;
-  /* bottom: 0; */
   left: 0;
   font-size: 0.9em;
 }

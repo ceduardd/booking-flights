@@ -1,5 +1,5 @@
-import { useRef, useState } from 'react';
-import ClassIncon from './ClassIncon';
+import { useState } from 'react';
+import ClassIncon from '../icons/ClassIncon';
 
 const ClassSelector = ({
   label,
@@ -17,8 +17,6 @@ const ClassSelector = ({
     setIsOpen(false);
   };
 
-  const menu = useRef(null);
-
   // Unselect dropdown list
   document.addEventListener(
     'click',
@@ -35,7 +33,7 @@ const ClassSelector = ({
   return (
     <div className="selector__container">
       <label>
-        {label}:
+        <span>{label}:</span>
         <div style={{ marginTop: '5px' }} className="form-group">
           <input
             className="form-control disabled"
@@ -46,14 +44,17 @@ const ClassSelector = ({
             onChange={e => changeHandler(e.target.value)}
           />
           <ClassIncon />
+
+          {/* Open class list */}
           <i
             className="fas fa-chevron-down dropdown-indicator"
             onClick={() => setIsOpen(!isOpen)}
           ></i>
         </div>
       </label>
+
       {isOpen && (
-        <div ref={menu} className="selector__menu" aria-hidden={true}>
+        <div className="selector__menu">
           <span className="selector__item selector__item-instruction">
             {menuInstruction}
           </span>

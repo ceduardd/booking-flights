@@ -1,8 +1,8 @@
 import '@testing-library/jest-dom';
 import '@testing-library/react';
 import { shallow } from 'enzyme';
-import AdultIcon from '../../components/AdultIcon';
-import TravelerSelector from '../../components/TravelerSelector';
+import AdultIcon from '../../../components/icons/AdultIcon';
+import TravelerSelector from '../../../components/selectors/TravelerSelector';
 
 describe('<TravelerSelector />', () => {
   test('should be match with snapshot', () => {

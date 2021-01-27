@@ -6,7 +6,9 @@ import FlightsForm from './components/FlightsForm';
 const App = () => {
   return (
     <Provider store={store}>
-      <FlightsForm />
+      <main className="home__container">
+        <FlightsForm />
+      </main>
     </Provider>
   );
 };

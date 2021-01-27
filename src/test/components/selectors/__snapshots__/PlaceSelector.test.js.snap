@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PlaceSelector /> should be match with snapshot  1`] = `
+<div
+  className="selector__container"
+>
+  <label>
+    <span>
+      :
+    </span>
+    <div
+      className="form-group"
+      style={
+        Object {
+          "marginTop": "5px",
+        }
+      }
+    >
+      <input
+        className="form-control"
+        onChange={[Function]}
+        type="text"
+      />
+      <i
+        className="fas fa-map-marker-alt"
+      />
+    </div>
+  </label>
+</div>
+`;
+
+exports[`<PlaceSelector /> should show error message 1`] = `
+<div
+  className="selector__container"
+>
+  <label>
+    <span>
+      :
+    </span>
+    <div
+      className="form-group"
+      style={
+        Object {
+          "marginTop": "5px",
+        }
+      }
+    >
+      <input
+        className="form-control"
+        onChange={[Function]}
+        type="text"
+      />
+      <i
+        className="fas fa-map-marker-alt"
+      />
+    </div>
+  </label>
+  <div
+    className="error-label"
+  >
+    <i
+      className="fas fa-exclamation-circle"
+    />
+     
+    Something error
+  </div>
+</div>
+`;

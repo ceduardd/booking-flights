@@ -1,6 +1,7 @@
 import DatePicker from 'react-date-picker';
 import { useSelector } from 'react-redux';
-import DropdownIcon from './DropdownIcon';
+import DropdownIcon from '../icons/DropdownIcon';
+import ErrorLabel from '../ErrorLabel';
 
 const DateSelector = ({
   label,
@@ -13,7 +14,7 @@ const DateSelector = ({
 
   return (
     <label className="date-selector" htmlFor="from">
-      {label}:
+      <span>{label}:</span>
       <div style={{ marginTop: '5px' }} className="form-group">
         <DatePicker
           value={value}
@@ -25,9 +26,7 @@ const DateSelector = ({
         <i className="far fa-calendar"></i>
       </div>
       {errorDate && errorDate === errorMessage && (
-        <div className="error-label">
-          <i className="fas fa-exclamation-circle"></i> {errorMessage}
-        </div>
+        <ErrorLabel>{errorMessage}</ErrorLabel>
       )}
     </label>
   );

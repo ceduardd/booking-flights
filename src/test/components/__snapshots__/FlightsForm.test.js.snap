@@ -1,0 +1,533 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FlightsForm /> should be match with snapshot 1`] = `
+<div
+  className="home__form-container"
+>
+  <div
+    className="home__form-tabs"
+  >
+    <button
+      className="active"
+      type="button"
+    >
+      <i
+        className="fas fa-plane"
+      />
+       Flights
+    </button>
+    <button
+      type="button"
+    >
+      <i
+        className="fas fa-car"
+      />
+       Cars
+    </button>
+    <button
+      type="button"
+    >
+      <i
+        className="fas fa-hotel"
+      />
+       Hotel
+    </button>
+  </div>
+  <form
+    autoComplete="off"
+    className="home__form-entries"
+    onSubmit={[Function]}
+  >
+    <div
+      className="home__form-flight-type"
+    >
+      <label
+        className="home__form-radio-btn not-active"
+        htmlFor="oneWay"
+      >
+        One Way
+        <input
+          checked={false}
+          id="oneWay"
+          name="flightType"
+          onChange={[Function]}
+          type="radio"
+          value="One Way"
+        />
+      </label>
+      <label
+        className="home__form-radio-btn active"
+        htmlFor="roundTrip"
+      >
+        Round Trip
+        <input
+          checked={true}
+          id="roundTrip"
+          name="flightType"
+          onChange={[Function]}
+          type="radio"
+          value="Round Trip"
+        />
+      </label>
+    </div>
+    <div
+      className="home__places"
+    >
+      <div
+        className="selector__container"
+      >
+        <label>
+          <span>
+            From
+            :
+          </span>
+          <div
+            className="form-group"
+            style={
+              Object {
+                "marginTop": "5px",
+              }
+            }
+          >
+            <input
+              className="form-control"
+              onChange={[Function]}
+              placeholder="Enter your origin"
+              type="text"
+              value=""
+            />
+            <i
+              className="fas fa-map-marker-alt"
+            />
+          </div>
+        </label>
+      </div>
+      <div
+        className="selector__container"
+      >
+        <label>
+          <span>
+            To
+            :
+          </span>
+          <div
+            className="form-group"
+            style={
+              Object {
+                "marginTop": "5px",
+              }
+            }
+          >
+            <input
+              className="form-control"
+              onChange={[Function]}
+              placeholder="Enter your destination"
+              type="text"
+              value=""
+            />
+            <i
+              className="fas fa-map-marker-alt"
+            />
+          </div>
+        </label>
+      </div>
+    </div>
+    <div
+      className="home__form-dates"
+    >
+      <label
+        className="date-selector"
+        htmlFor="from"
+      >
+        <span>
+          Outbound
+          :
+        </span>
+        <div
+          className="form-group"
+          style={
+            Object {
+              "marginTop": "5px",
+            }
+          }
+        >
+          <div
+            className="react-date-picker react-date-picker--closed react-date-picker--enabled"
+            onFocus={[Function]}
+          >
+            <div
+              className="react-date-picker__wrapper"
+            >
+              <div
+                className="react-date-picker__inputGroup"
+                onClick={[Function]}
+              >
+                <input
+                  max="275760-09-12"
+                  min="0000-12-31"
+                  name="date"
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  style={
+                    Object {
+                      "position": "absolute",
+                      "visibility": "hidden",
+                      "zIndex": "-999",
+                    }
+                  }
+                  type="date"
+                  value="2021-01-27"
+                />
+                <input
+                  autoComplete="off"
+                  className="react-date-picker__inputGroup__input react-date-picker__inputGroup__month"
+                  data-input="true"
+                  inputMode="numeric"
+                  key="input"
+                  max={12}
+                  min={1}
+                  name="month"
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyPress={[Function]}
+                  onKeyUp={[Function]}
+                  placeholder="--"
+                  required={null}
+                  type="number"
+                  value={1}
+                />
+                <span
+                  className="react-date-picker__inputGroup__divider"
+                >
+                  /
+                </span>
+                <input
+                  autoComplete="off"
+                  autoFocus={false}
+                  className="react-date-picker__inputGroup__input react-date-picker__inputGroup__day"
+                  data-input="true"
+                  inputMode="numeric"
+                  key="input"
+                  max={31}
+                  min={1}
+                  name="day"
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyPress={[Function]}
+                  onKeyUp={[Function]}
+                  placeholder="--"
+                  required={null}
+                  type="number"
+                  value={27}
+                />
+                <span
+                  className="react-date-picker__inputGroup__divider"
+                >
+                  /
+                </span>
+                <input
+                  autoComplete="off"
+                  autoFocus={false}
+                  className="react-date-picker__inputGroup__input react-date-picker__inputGroup__year"
+                  data-input="true"
+                  inputMode="numeric"
+                  key="input"
+                  max={275760}
+                  min={1}
+                  name="year"
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyPress={[Function]}
+                  onKeyUp={[Function]}
+                  placeholder="----"
+                  required={null}
+                  step={1}
+                  type="number"
+                  value={2021}
+                />
+              </div>
+              <button
+                className="react-date-picker__calendar-button react-date-picker__button"
+                onClick={[Function]}
+                onFocus={[Function]}
+                type="button"
+              >
+                <i
+                  className="fas fa-chevron-down"
+                />
+              </button>
+            </div>
+          </div>
+          <i
+            className="far fa-calendar"
+          />
+        </div>
+      </label>
+      <label
+        className="date-selector"
+        htmlFor="from"
+      >
+        <span>
+          Return
+          :
+        </span>
+        <div
+          className="form-group"
+          style={
+            Object {
+              "marginTop": "5px",
+            }
+          }
+        >
+          <div
+            className="react-date-picker react-date-picker--closed react-date-picker--enabled"
+            onFocus={[Function]}
+          >
+            <div
+              className="react-date-picker__wrapper"
+            >
+              <div
+                className="react-date-picker__inputGroup"
+                onClick={[Function]}
+              >
+                <input
+                  disabled={false}
+                  max="275760-09-12"
+                  min="0000-12-31"
+                  name="date"
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  style={
+                    Object {
+                      "position": "absolute",
+                      "visibility": "hidden",
+                      "zIndex": "-999",
+                    }
+                  }
+                  type="date"
+                  value="2021-01-30"
+                />
+                <input
+                  autoComplete="off"
+                  className="react-date-picker__inputGroup__input react-date-picker__inputGroup__month"
+                  data-input="true"
+                  disabled={false}
+                  inputMode="numeric"
+                  key="input"
+                  max={12}
+                  min={1}
+                  name="month"
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyPress={[Function]}
+                  onKeyUp={[Function]}
+                  placeholder="--"
+                  required={null}
+                  type="number"
+                  value={1}
+                />
+                <span
+                  className="react-date-picker__inputGroup__divider"
+                >
+                  /
+                </span>
+                <input
+                  autoComplete="off"
+                  autoFocus={false}
+                  className="react-date-picker__inputGroup__input react-date-picker__inputGroup__day"
+                  data-input="true"
+                  disabled={false}
+                  inputMode="numeric"
+                  key="input"
+                  max={31}
+                  min={1}
+                  name="day"
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyPress={[Function]}
+                  onKeyUp={[Function]}
+                  placeholder="--"
+                  required={null}
+                  type="number"
+                  value={30}
+                />
+                <span
+                  className="react-date-picker__inputGroup__divider"
+                >
+                  /
+                </span>
+                <input
+                  autoComplete="off"
+                  autoFocus={false}
+                  className="react-date-picker__inputGroup__input react-date-picker__inputGroup__year"
+                  data-input="true"
+                  disabled={false}
+                  inputMode="numeric"
+                  key="input"
+                  max={275760}
+                  min={1}
+                  name="year"
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  onKeyDown={[Function]}
+                  onKeyPress={[Function]}
+                  onKeyUp={[Function]}
+                  placeholder="----"
+                  required={null}
+                  step={1}
+                  type="number"
+                  value={2021}
+                />
+              </div>
+              <button
+                className="react-date-picker__calendar-button react-date-picker__button"
+                disabled={false}
+                onClick={[Function]}
+                onFocus={[Function]}
+                type="button"
+              >
+                <i
+                  className="fas fa-chevron-down"
+                />
+              </button>
+            </div>
+          </div>
+          <i
+            className="far fa-calendar"
+          />
+        </div>
+      </label>
+    </div>
+    <div
+      className="selector__container"
+    >
+      <label>
+        <span>
+          Class
+          :
+        </span>
+        <div
+          className="form-group"
+          style={
+            Object {
+              "marginTop": "5px",
+            }
+          }
+        >
+          <input
+            className="form-control disabled"
+            disabled={true}
+            onChange={[Function]}
+            placeholder="Seleact a class flight"
+            type="text"
+            value="Economy"
+          />
+          <i
+            className="far fa-star"
+          />
+          <i
+            className="fas fa-chevron-down dropdown-indicator"
+            onClick={[Function]}
+          />
+        </div>
+      </label>
+    </div>
+    <div
+      className="home__form-travelers"
+    >
+      <label
+        className="traveler-selector"
+      >
+        <span>
+          Adutls
+          :
+        </span>
+        <div
+          className="form-group"
+          style={
+            Object {
+              "marginTop": "5px",
+            }
+          }
+        >
+          <input
+            className="form-control"
+            min={0}
+            onChange={[Function]}
+            type="number"
+            value={1}
+          />
+          <i
+            className="fas fa-male"
+          />
+        </div>
+      </label>
+      <label
+        className="traveler-selector"
+      >
+        <span>
+          Children
+          :
+        </span>
+        <div
+          className="form-group"
+          style={
+            Object {
+              "marginTop": "5px",
+            }
+          }
+        >
+          <input
+            className="form-control"
+            min={0}
+            onChange={[Function]}
+            type="number"
+            value={0}
+          />
+          <i
+            className="fas fa-child"
+          />
+        </div>
+      </label>
+      <label
+        className="traveler-selector"
+      >
+        <span>
+          Infants
+          :
+        </span>
+        <div
+          className="form-group"
+          style={
+            Object {
+              "marginTop": "5px",
+            }
+          }
+        >
+          <input
+            className="form-control"
+            min={0}
+            onChange={[Function]}
+            type="number"
+            value={0}
+          />
+          <i
+            className="fas fa-baby"
+          />
+        </div>
+      </label>
+    </div>
+    <button
+      className="home__form-btn"
+      type="submit"
+    >
+      Search
+    </button>
+  </form>
+</div>
+`;
