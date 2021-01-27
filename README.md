@@ -1,5 +1,7 @@
 # Booking Flights Component
 
+Live demo [Here](https://booking-flights.vercel.app/)
+
 This is a component for searching flights with suggestions from various airlines built with React.
 
 ![](./docs/screenshot.png)
@@ -21,4 +23,4 @@ Support suggestions with [Edestinos API](https://edestinos.com)
 
 [Font Awesome](https://fontawesome.com/) Icons
 
-Design inspiration form [Behance](https://www.behance.net/gallery/111277885/violet-trip-web-site-for-flight-booking)
+Design inspiration from [Behance](https://www.behance.net/gallery/111277885/violet-trip-web-site-for-flight-booking)
