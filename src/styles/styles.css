@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+:root {
+  --bg-color: #64afd6;
+  --accent-color: #6d28d9;
+  --text-color: #333339;
+  --error-color: #eb596e;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-color);
+}
+
+.home__container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url('../assets/bg-image.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.home__form-container {
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  max-width: 600px;
+  /* max-width: 1000px; */
+  width: 90%;
+  box-shadow: 0 5px 5px 2px rgba(0, 0, 0, 0.2);
+  margin: 20px 0;
+}
+
+.home__form-entries {
+  padding: 20px 30px;
+}
+
+.home__form-btn {
+  padding: 10px 15px;
+  width: 100%;
+  border: 0;
+  border-radius: 8px;
+  background-color: var(--accent-color);
+  text-transform: uppercase;
+  font-family: inherit;
+  font-size: 1.2em;
+  color: #fff;
+  cursor: pointer;
+}
+
+.home__form-btn:focus {
+  outline: 0;
+}
+
+.home__form-tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  overflow: hidden;
+}
+
+.home__form-tabs button {
+  flex: 1;
+  background-color: var(--accent-color);
+  border: 0;
+  padding: 15px 0;
+  font-size: 1em;
+  color: #fff;
+  font-family: inherit;
+  transition: background ease-in 0.2s;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* .home__form-tabs button:not(:last-child):not(.active) {
+  border-right: 1px solid #fff;
+} */
+
+.home__form-tabs button:focus {
+  outline: 0;
+}
+
+.home__form-tabs button.active {
+  background-color: transparent;
+  color: var(--accent-color);
+}
+
+/* Utils */
+.form-group {
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.form-control,
+.select {
+  display: block;
+  padding: 15px 10px 15px 50px;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  font-family: inherit;
+  font-size: 1em;
+
+  outline: 0;
+  color: inherit;
+  font-weight: 700;
+}
+
+.form-group i {
+  color: var(--accent-color);
+}
+
+.form-group .fa-map-marker-alt,
+.form-group .fa-calendar,
+.form-group .fa-child,
+.form-group .fa-male,
+.form-group .fa-baby,
+.form-group .fa-star {
+  color: var(--accent-color);
+  position: absolute;
+  font-size: 20px;
+  top: calc(50% - 10px);
+  left: 15px;
+}
+
+/* Date picker */
+.react-date-picker {
+  display: flex;
+  width: 100%;
+}
+
+.react-date-picker__wrapper {
+  border-radius: 8px;
+  padding: 15px 10px 15px 50px;
+  background-color: #fff;
+  border: 0;
+  font-weight: 700;
+}
+
+.react-date-picker__calendar-button.react-date-picker__button {
+  outline: 0;
+}
+
+/* Dropdowns styles */
+.selector__container {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.selector__menu {
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  color: var(--text-color);
+  border-radius: 8px;
+  z-index: 1;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  overflow-y: scroll;
+  max-height: 300px;
+}
+
+.selector__item {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.selector__item:hover {
+  background-color: #f2f2f2;
+}
+
+.selector__item:not(:last-child) {
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.selector__item.selector__item-instruction {
+  background-color: #fff;
+  color: gray;
+}
+
+/* Tamaño del scroll */
+.selector__menu::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Estilos barra (thumb) de scroll */
+.selector__menu::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+.selector__menu::-webkit-scrollbar-thumb:active {
+  background-color: #999999;
+}
+
+.selector__menu::-webkit-scrollbar-thumb:hover {
+  background: #b3b3b3;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos track de scroll */
+.selector__menu::-webkit-scrollbar-track {
+  background: #e1e1e1;
+  border-radius: 4px;
+}
+
+.selector__menu::-webkit-scrollbar-track:hover,
+.selector__menu::-webkit-scrollbar-track:active {
+  background: #d4d4d4;
+}
+
+.home__form-flight-type {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.home__form-flight-type button:focus {
+  outline: none;
+  background-color: #c6b6fc;
+}
+
+.home__form-radio-btn {
+  padding: 8px 20px;
+  border: 0;
+  background-color: #ddd6ff;
+  font-size: 1em;
+  font-family: inherit;
+  cursor: pointer;
+  margin: 0 10px;
+  border-radius: 8px;
+  position: relative;
+  font-weight: 500;
+  color: inherit;
+}
+
+.home__form-radio-btn.active {
+  background-color: #c5b5fe;
+}
+
+.home__form-radio-btn input {
+  position: absolute;
+  opacity: 0;
+}
+
+.home__form-travelers {
+  margin-bottom: 30px;
+}
+
+.home__form-dates {
+  position: relative;
+}
+
+.home__form-dates,
+.home__form-travelers {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+/* 
+.home__form-dates {
+  margin-top: 30px;
+} */
+
+.date-selector {
+  display: block;
+  width: 100%;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.date-selector:not(:last-child),
+.traveler-selector:not(:last-child) {
+  margin-right: 10px;
+}
+
+.form-control.disabled {
+  background-color: #fff !important;
+}
+
+.dropdown-indicator {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  cursor: pointer;
+}
+
+.error-label {
+  color: var(--error-color);
+  font-style: italic;
+  position: absolute;
+  /* bottom: 0; */
+  left: 0;
+  font-size: 0.9em;
+}
+
+.home__form-dates > .error-label {
+  top: -20px;
+}
+
+@media screen and (max-width: 500px) {
+  .home__form-dates {
+    flex-direction: column;
+  }
+
+  .error-label {
+    font-size: 12px;
+  }
+}
+
+/* @media screen and (min-width: 500px) {
+  .home__form-entries {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      'type type type'
+      'places dates details';
+    gap: 10px;
+  }
+
+  .home__form-flight-type {
+    grid-area: type;
+  }
+
+  .home__places {
+    grid-area: places;
+  }
+
+  .home__form-dates {
+    grid-area: dates;
+  }
+} */

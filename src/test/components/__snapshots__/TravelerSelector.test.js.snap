@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TravelerSelector /> should be match with snapshot 1`] = `
+<label
+  className="traveler-selector"
+>
+  <span>
+    :
+  </span>
+  <div
+    className="form-group"
+    style={
+      Object {
+        "marginTop": "5px",
+      }
+    }
+  >
+    <input
+      className="form-control"
+      onChange={[Function]}
+      type="number"
+    />
+    <AdultIcon />
+  </div>
+</label>
+`;
+
+exports[`<TravelerSelector /> should have the correct props 1`] = `
+<label
+  className="traveler-selector"
+>
+  <span>
+    Adults
+    :
+  </span>
+  <div
+    className="form-group"
+    style={
+      Object {
+        "marginTop": "5px",
+      }
+    }
+  >
+    <input
+      className="form-control"
+      onChange={[Function]}
+      type="number"
+      value={0}
+    />
+    <AdultIcon />
+  </div>
+</label>
+`;
